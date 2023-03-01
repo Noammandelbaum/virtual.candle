@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import Candle from './components/Candle';
+import ShareSocial from './components/ShareSocial';
 import './App.css';
+import { Box } from '@mui/system';
+
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
+    <div className="App" height="100%" style={{ backgroundColor: "#D6C584" }}>
+      {/* <ShareSocial /> */}
+        <Candle />
     </div>
   );
 }
