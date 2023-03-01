@@ -52,11 +52,11 @@ function Candle() {
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
-                        bgcolor: "#D6C584",
+                        bgcolor: "#f4edd5",
                     }}>
                     <Image src={candle_image}
                         // height="100%"
-                        width="95%"
+                        width="100%"
 
                     />
                     <CardContent>
@@ -75,7 +75,6 @@ function Candle() {
             {/* <Dialog dir="rtl"> */}
             <TextField
                 onChange={changeInput}
-                autoFocus
                 inputProps={{ maxLength: 40 }}
                 width="100%"
                 // helperText="כתוב את השם"
@@ -92,7 +91,9 @@ function Candle() {
             </Typography>
             {/* <Divider orientation="vertical" flexItem /> */}
             <FileDownloadIcon onClick={handleImageDownload} fontSize="large" color="primary" sx={{ mt: 5 }} />
-
+            <Typography variant="h8" component="div">
+                הורדה
+            </Typography>
         </>
     );
 }

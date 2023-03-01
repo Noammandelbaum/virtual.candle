@@ -10,7 +10,7 @@ function App() {
 
   return (
   
-    <div className="App" height="100%" style={{ backgroundColor: "#D6C584" }}>
+    <div className="App" height="100%">
       {/* <ShareSocial /> */}
         <Candle />
     </div>
