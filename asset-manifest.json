@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Virtual_candle/static/css/main.648c8bdf.css",
-    "main.js": "/Virtual_candle/static/js/main.e6e11a02.js",
+    "main.css": "/Virtual_candle/static/css/main.074ff4b1.css",
+    "main.js": "/Virtual_candle/static/js/main.d7330dff.js",
     "static/js/787.1b375bc5.chunk.js": "/Virtual_candle/static/js/787.1b375bc5.chunk.js",
     "static/media/yakir1.jpg": "/Virtual_candle/static/media/yakir1.f1c48b636f69dd02d85a.jpg",
     "index.html": "/Virtual_candle/index.html",
-    "main.648c8bdf.css.map": "/Virtual_candle/static/css/main.648c8bdf.css.map",
-    "main.e6e11a02.js.map": "/Virtual_candle/static/js/main.e6e11a02.js.map",
+    "main.074ff4b1.css.map": "/Virtual_candle/static/css/main.074ff4b1.css.map",
+    "main.d7330dff.js.map": "/Virtual_candle/static/js/main.d7330dff.js.map",
     "787.1b375bc5.chunk.js.map": "/Virtual_candle/static/js/787.1b375bc5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.648c8bdf.css",
-    "static/js/main.e6e11a02.js"
+    "static/css/main.074ff4b1.css",
+    "static/js/main.d7330dff.js"
   ]
 }
