@@ -1,23 +1,26 @@
-import { Button, ButtonGroup, ListItem, Card, CardActions, CardContent, IconButton, TextField, Typography, Divider, Dialog } from '@mui/material';
+import { Card, CardContent, IconButton, TextField, Typography, Dialog, Link } from '@mui/material';
 import Image from 'mui-image'
-import candle_image from '../yakir1.jpg'
+import candle_header from '../yakir-header.jpg'
+import candle_futter from '../yakir4.jpeg'
 import ShareIcon from '@mui/icons-material/Share'
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import { styled } from '@mui/material/styles';
-import EditIcon from '@mui/icons-material/Edit';
 import html2canvas from 'html2canvas';
 import { useState } from 'react';
-import { Stack } from '@mui/system';
-// import rtlPlugin from 'stylis-plugin-rtl';
+import AssistantTypo from '../AssistantTypo';
+
+const widthImage = "100%";
+const marginTop = 2;
+const marginBot = 3;
 
 function Candle() {
+    const [personalText, setPersonalText] = useState();
+
     const handleImageDownload = async () => {
         const element = document.getElementById('print'),
             canvas = await html2canvas(element),
             data = canvas.toDataURL('image/jpg'),
             link = document.createElement('a');
         link.href = data;
-
         link.download = 'downloaded-image.jpg';
         document.body.appendChild(link);
         link.click();
@@ -38,62 +41,106 @@ function Candle() {
             console.log('Shared successfully');
         })
     }
-    function changeInput(e){
+
+    function changeInput(e) {
         setPersonalText(e.target.value)
     }
 
-    const [personalText, setPersonalText] = useState();
     return (
         <>
-            <div id="print">
+            <AssistantTypo />
+            <div id="print" >
                 <Card
                     sx={{
-                        marginTop: 8,
+                        marginTop: marginTop,
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
                         bgcolor: "#f4edd5",
                     }}>
-                    <Image src={candle_image}
-                        // height="100%"
-                        width="100%"
-
+                    <Image
+                        src={candle_header}
+                        width={widthImage}
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div" >
-                            {personalText && "אנחנו זוכרים את"}
+                        <Typography
+                            style={{
+                                fontFamily: 'Assistant',
+                                color: '#1da398',
+                            }}
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                        >
+                            {personalText && "זוכרים באהבה את"}
                         </Typography>
-                        <Typography gutterBottom variant="h5" component="div" >
-                            {personalText ? `${personalText}` : `משפחות השכול האזרחי אנחנו  אתכם`}
+                        <Typography
+                            style={{
+                                fontFamily: 'Assistant',
+                                color: '#1da398',
+                            }}
+                            gutterBottom
+                            variant="h4"
+                            component="div"
+                        >
+                            {personalText && ` ${personalText}`}
                         </Typography>
-                        <Typography variant="h6" component="div">
-                            אתם לא לבד בסיפור הזה
+                        <Typography style={{
+                            fontFamily: 'Assistant',
+                            color: '#1da398',
+                        }}
+                            gutterBottom
+                            variant="h4"
+                            component="div"
+                        >
+                            {!personalText && `לזכר חללי השכול האזרחי`}
                         </Typography>
                     </CardContent>
+                    <Image
+                        src={candle_futter}
+                        width={widthImage}
+                    />
                 </Card>
-            </div>
-            {/* <Dialog dir="rtl"> */}
-            <TextField
+            </div >
+
+            < TextField
                 onChange={changeInput}
                 inputProps={{ maxLength: 40 }}
-                width="100%"
-                // helperText="כתוב את השם"
                 label="אנחנו זוכרים את"
-                sx={{ mt: 2 }} />
-            {/* </Dialog> */}
-            {/* <Divider variant="middle" /> */}
-            {/* <ButtonGroup variant="text" aria-label="text button group"> */}
-            <IconButton color="primary" aria-label="שתף" >
-                <ShareIcon fontSize="large" onClick={onShare} sx={{ mx: 20,mt:2 }} />
+                sx={{ mt: marginTop, mx: 10 }} />
+            <IconButton
+                color="primary"
+                aria-label="שתף"
+            >
+                <ShareIcon
+                    fontSize="large"
+                    onClick={onShare}
+                    sx={{ mt: marginTop }}
+                />
             </IconButton>
-            <Typography variant="h8" component="div">
+            <Typography
+                variant="h8"
+                component="div"
+            >
                 לשתף עם העולם
             </Typography>
-            {/* <Divider orientation="vertical" flexItem /> */}
-            <FileDownloadIcon onClick={handleImageDownload} fontSize="large" color="primary" sx={{ mt: 5 }} />
-            <Typography variant="h8" component="div">
+            <FileDownloadIcon
+                onClick={handleImageDownload}
+                fontSize="large"
+                color="primary"
+                sx={{ mt: marginTop }} />
+            <Typography
+                sx={{ mb: 5 }}
+                variant="h8"
+                component="div">
                 הורדה
             </Typography>
+            <Link
+                sx={{ mb: marginBot }}
+                href="https://yakirli.org/awareness-week/"
+            >
+                למידע נוסף אודות שבוע המודעות לשכול האזרחי
+            </Link>
         </>
     );
 }
