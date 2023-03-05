@@ -1,4 +1,4 @@
-import { Card, CardContent, IconButton, TextField, Typography, Dialog, Link } from '@mui/material';
+import { Card, CardContent, IconButton, TextField, Typography, Link } from '@mui/material';
 import Image from 'mui-image'
 import candle_header from '../yakir title.jpeg'
 import ShareIcon from '@mui/icons-material/Share'
@@ -20,7 +20,7 @@ function Candle() {
             data = canvas.toDataURL('image/jpg'),
             link = document.createElement('a');
         link.href = data;
-        link.download = 'downloaded-image.jpg';
+        link.download = 'מדליקים נר בשבוע המודעות לשכול האזרחי.jpg';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -32,7 +32,7 @@ function Candle() {
             data = canvas.toDataURL('image/jpg');
         const response = await fetch(data);
         const blob = await response.blob();
-        const filesArray = [new File([blob], 'yakir1.jpg', { type: "image/jpeg", lastModified: new Date().getTime() })];
+        const filesArray = [new File([blob], 'מדליקים נר בשבוע המודעות לשכול האזרחי.jpg', { type: "image/jpeg", lastModified: new Date().getTime() })];
         const shareData = {
             files: filesArray,
         };
@@ -48,6 +48,11 @@ function Candle() {
     return (
         <>
             <AssistantTypo />
+            < TextField
+                onChange={changeInput}
+                inputProps={{ maxLength: 40 }}
+                label="זוכרים באהבה את"
+                sx={{ mt: marginTop, mx: 10 }} />
             <div id="print" >
                 <Card
                     sx={{
@@ -83,30 +88,12 @@ function Candle() {
                             component="div"
                         >
                             {personalText && ` ${personalText}`}
-                        </Typography>
-                        <Typography style={{
-                            fontFamily: 'Assistant',
-                            color: '#1da398',
-                        }}
-                            gutterBottom
-                            variant="h4"
-                            component="div"
-                        >
-                            {!personalText && `לזכר חללי השכול האזרחי`}
-                        </Typography>
+                        </Typography>  
                     </CardContent>
-                    {/* <Image
-                        src={candle_futter}
-                        width={widthImage}
-                    /> */}
                 </Card>
             </div >
 
-            < TextField
-                onChange={changeInput}
-                inputProps={{ maxLength: 40 }}
-                label="אנחנו זוכרים את"
-                sx={{ mt: marginTop, mx: 10 }} />
+          
             <IconButton
                 color="primary"
                 aria-label="שתף"
@@ -139,7 +126,7 @@ function Candle() {
                 href="https://yakirli.org/awareness-week/"
             >
                 למידע נוסף אודות שבוע המודעות לשכול האזרחי
-            </Link>
+                </Link>
         </>
     );
 }
