@@ -1,7 +1,6 @@
 import { Card, CardContent, IconButton, TextField, Typography, Dialog, Link } from '@mui/material';
 import Image from 'mui-image'
-import candle_header from '../yakir-header.jpg'
-import candle_futter from '../yakir4.jpeg'
+import candle_header from '../yakir title.jpeg'
 import ShareIcon from '@mui/icons-material/Share'
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import html2canvas from 'html2canvas';
@@ -96,10 +95,10 @@ function Candle() {
                             {!personalText && `לזכר חללי השכול האזרחי`}
                         </Typography>
                     </CardContent>
-                    <Image
+                    {/* <Image
                         src={candle_futter}
                         width={widthImage}
-                    />
+                    /> */}
                 </Card>
             </div >
 
