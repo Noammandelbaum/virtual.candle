@@ -32,12 +32,13 @@ function Candle() {
             data = canvas.toDataURL('image/jpg');
         const response = await fetch(data);
         const blob = await response.blob();
-        const filesArray = [new File([blob], 'מדליקים נר בשבוע המודעות לשכול האזרחי.jpg', { type: "image/jpeg", lastModified: new Date().getTime() })];
+        const filesArray = [new File([blob], 'מדליקים נר בשבוע המודעות לשכול האזרחי.jpg', { type: "image/jpeg", lastModified: new Date().getTime()})];
         const shareData = {
             files: filesArray,
+            text: 'https://noammandelbaum.github.io/Virtual_candle/\n#מדליקים_נר',
         };
         navigator.share(shareData).then(() => {
-            console.log('Shared successfully');
+            // console.log('Shared successfully');
         })
     }
 
@@ -48,6 +49,19 @@ function Candle() {
     return (
         <>
             <AssistantTypo />
+            <Typography
+                sx={{ mt: marginTop, mx: 10 }}
+                variant="h8"
+                component="div"
+            >
+                {`?איך מדליקים נר וירטואלי`}
+            </Typography> 
+            <Typography
+                variant="h8"
+                component="div"
+            >
+                {`!פשוט כותבים את שם יקירכם, ומשתפים`}
+            </Typography>
             < TextField
                 onChange={changeInput}
                 inputProps={{ maxLength: 40 }}
@@ -108,7 +122,13 @@ function Candle() {
                 variant="h8"
                 component="div"
             >
-                לשתף עם העולם
+                :שתפו ותייגו
+            </Typography>
+            <Typography
+                variant="h8"
+                component="div"
+            >
+                מדליקים_נר#
             </Typography>
             <FileDownloadIcon
                 onClick={handleImageDownload}
