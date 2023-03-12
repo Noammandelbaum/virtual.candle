@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Virtual_candle/static/css/main.558f08d6.css",
-    "main.js": "/Virtual_candle/static/js/main.ca0a69bb.js",
+    "main.js": "/Virtual_candle/static/js/main.42e9dc2d.js",
     "static/js/787.1b375bc5.chunk.js": "/Virtual_candle/static/js/787.1b375bc5.chunk.js",
     "static/media/yakir title.jpeg": "/Virtual_candle/static/media/yakir title.4e6c0c18758bce7df72c.jpeg",
     "static/media/assistant.ttf": "/Virtual_candle/static/media/assistant.b75601d31d2637c2010a.ttf",
     "index.html": "/Virtual_candle/index.html",
     "main.558f08d6.css.map": "/Virtual_candle/static/css/main.558f08d6.css.map",
-    "main.ca0a69bb.js.map": "/Virtual_candle/static/js/main.ca0a69bb.js.map",
+    "main.42e9dc2d.js.map": "/Virtual_candle/static/js/main.42e9dc2d.js.map",
     "787.1b375bc5.chunk.js.map": "/Virtual_candle/static/js/787.1b375bc5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.558f08d6.css",
-    "static/js/main.ca0a69bb.js"
+    "static/js/main.42e9dc2d.js"
   ]
 }
