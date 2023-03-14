@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Virtual_candle/static/css/main.558f08d6.css",
-    "main.js": "/Virtual_candle/static/js/main.42e9dc2d.js",
-    "static/js/787.1b375bc5.chunk.js": "/Virtual_candle/static/js/787.1b375bc5.chunk.js",
-    "static/media/yakir title.jpeg": "/Virtual_candle/static/media/yakir title.4e6c0c18758bce7df72c.jpeg",
-    "static/media/assistant.ttf": "/Virtual_candle/static/media/assistant.b75601d31d2637c2010a.ttf",
-    "index.html": "/Virtual_candle/index.html",
-    "main.558f08d6.css.map": "/Virtual_candle/static/css/main.558f08d6.css.map",
-    "main.42e9dc2d.js.map": "/Virtual_candle/static/js/main.42e9dc2d.js.map",
-    "787.1b375bc5.chunk.js.map": "/Virtual_candle/static/js/787.1b375bc5.chunk.js.map"
+    "main.css": "/virtual.candle/static/css/main.558f08d6.css",
+    "main.js": "/virtual.candle/static/js/main.d9afae5c.js",
+    "static/js/787.1b375bc5.chunk.js": "/virtual.candle/static/js/787.1b375bc5.chunk.js",
+    "static/media/yakir title.jpeg": "/virtual.candle/static/media/yakir title.8c3e4d89696e7a1cd4cd.jpeg",
+    "static/media/assistant.ttf": "/virtual.candle/static/media/assistant.b75601d31d2637c2010a.ttf",
+    "index.html": "/virtual.candle/index.html",
+    "main.558f08d6.css.map": "/virtual.candle/static/css/main.558f08d6.css.map",
+    "main.d9afae5c.js.map": "/virtual.candle/static/js/main.d9afae5c.js.map",
+    "787.1b375bc5.chunk.js.map": "/virtual.candle/static/js/787.1b375bc5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.558f08d6.css",
-    "static/js/main.42e9dc2d.js"
+    "static/js/main.d9afae5c.js"
   ]
 }
